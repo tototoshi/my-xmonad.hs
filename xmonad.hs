@@ -33,7 +33,7 @@ myBorderWidth   = 1
 -- ("right alt"), which does not conflict with emacs keybindings. The
 -- "windows key" is usually mod4Mask.
 --
-myModMask       = mod1Mask
+myModMask       = mod4Mask
 
 -- The mask for the numlock key. Numlock status is "masked" from the
 -- current modifier status, so the keybindings will work with numlock on or
@@ -277,7 +277,7 @@ defaults = defaultConfig {
         terminal           = myTerminal,
         focusFollowsMouse  = myFocusFollowsMouse,
         borderWidth        = myBorderWidth,
-        modMask            = mod4Mask,
+        modMask            = myModMask,
         numlockMask        = myNumlockMask,
         workspaces         = myWorkspaces,
         normalBorderColor  = myNormalBorderColor,
