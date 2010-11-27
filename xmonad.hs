@@ -14,6 +14,8 @@ import System.Exit
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
 
+import Graphics.X11.ExtraTypes.XF86
+
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
@@ -81,8 +83,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_p     ), spawn "gmrun")
 
     -- volume control
-    , ((modm .|. shiftMask, xK_Up     ), spawn "amixer sset Master 10%+")
-    , ((modm .|. shiftMask, xK_Down     ), spawn "amixer sset Master 10%-")
+    , ((0, xF86XK_AudioRaiseVolume   ), spawn "amixer sset Master 10%+")
+    , ((0, xF86XK_AudioLowerVolume   ), spawn "amixer sset Master 10%-")
 
     -- close focused window
     , ((modm .|. shiftMask, xK_c     ), kill)
