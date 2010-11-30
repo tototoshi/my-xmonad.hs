@@ -79,6 +79,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch gmrun
     , ((modm,               xK_p     ), spawn "gmrun")
 
+    -- launch google-chrome
+    , ((modm,               xK_g     ), spawn "google-chrome")
+
     -- volume control
     , ((0, xF86XK_AudioRaiseVolume   ), spawn "amixer sset Master 10%+")
     , ((0, xF86XK_AudioLowerVolume   ), spawn "amixer sset Master 10%-")
